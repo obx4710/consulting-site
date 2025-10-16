@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acme Consulting — Strategy & Ops</title>
+  <meta name="description" content="Acme Consulting helps startups and small businesses with strategy, operations, and growth. Book a free consultation.">
+  <link rel="canonical" href="https://example.com/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Acme Consulting — Strategy & Ops">
+  <meta property="og:description" content="Strategy, operations, and growth for startups and small businesses.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="https://example.com/og.jpg">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Acme Consulting — Strategy & Ops">
+  <meta name="twitter:description" content="Strategy, operations, and growth for startups and small businesses.">
+  <meta name="twitter:image" content="https://example.com/og.jpg">
+
+  <!-- Google Analytics (GA4) – replace G-XXXXXX with your Measurement ID -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXX');
+  </script> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <div class="brand">Acme Consulting</div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn">Book a Call</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Clear strategy. Smooth operations. Real growth.</h1>
+      <p>We help founders and small teams unblock bottlenecks and scale with confidence.</p>
+      <a href="#contact" class="btn btn-primary">Get a free 20‑min consult</a>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="container grid">
+      <div class="card">
+        <h3>Strategy Sprints</h3>
+        <p>90‑day plans with measurable outcomes, aligned to your north star.</p>
+      </div>
+      <div class="card">
+        <h3>Ops & Process</h3>
+        <p>Workflow audits, SOPs, and automations that save hours every week.</p>
+      </div>
+      <div class="card">
+        <h3>Go‑to‑Market</h3>
+        <p>Positioning, messaging, and repeatable lead-generation playbooks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section alt">
+    <div class="container">
+      <h2>About</h2>
+      <p>We’ve helped 50+ startups and SMBs refine strategy, streamline operations, and unlock growth across SaaS, e‑commerce, and services.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Book a Free Consult</h2>
+      <p>Tell us a bit about your goals. We’ll respond within one business day.</p>
+
+      <!-- Netlify Forms: add name, method, data-netlify, hidden form-name, and honeypot -->
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hidden">
+          <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+        </p>
+        <div class="grid2">
+          <p><label>Your name*<br><input type="text" name="name" required></label></p>
+          <p><label>Email*<br><input type="email" name="email" required></label></p>
+        </div>
+        <p><label>Company<br><input type="text" name="company"></label></p>
+        <p><label>What do you want to achieve?<br><textarea name="message" rows="5" placeholder="Briefly describe your goals"></textarea></label></p>
+        <p><button type="submit" class="btn btn-primary">Send</button></p>
+      </form>
+
+      <hr class="spacer">
+
+      <h3>Newsletter</h3>
+      <p>Get quarterly insights on strategy and ops.</p>
+      <!-- Mailchimp (or similar) embedded form – replace action URL with your own provider -->
+      <form action="https://example.us1.list-manage.com/subscribe/post?u=YOUR_U&amp;id=YOUR_ID" method="post" target="_blank" novalidate>
+        <div class="grid2">
+          <p><label>Email*<br><input type="email" name="EMAIL" required></label></p>
+          <p><button type="submit" class="btn">Subscribe</button></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container small">
+      <span>© <span id="year"></span> Acme Consulting</span>
+      <span>•</span>
+      <a href="/privacy.html">Privacy</a>
+    </div>
+  </footer>
+
+  <!-- JSON-LD Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Acme Consulting",
+    "url": "https://example.com/",
+    "logo": "https://example.com/og.jpg",
+    "sameAs": ["https://www.linkedin.com/"]
+  }
+  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
