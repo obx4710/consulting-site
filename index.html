@@ -82,7 +82,7 @@
       <p>Tell us a bit about your goals. We’ll respond within one business day.</p>
 
       <!-- Netlify Forms: add name, method, data-netlify, hidden form-name, and honeypot -->
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
         <input type="hidden" name="form-name" value="contact">
         <p class="hidden">
           <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
