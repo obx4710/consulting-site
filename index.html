@@ -88,31 +88,19 @@
       <h2>Book a Free Consult</h2>
       <p>Tell us a bit about your goals. We’ll respond within one business day.</p>
 
-      <!-- Netlify Forms: add name, method, data-netlify, hidden form-name, and honeypot -->
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
-        <input type="hidden" name="form-name" value="contact">
-        <p class="hidden">
-          <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
-        </p>
-        <div class="grid2">
-          <p><label>Your name*<br><input type="text" name="name" required></label></p>
-          <p><label>Email*<br><input type="email" name="email" required></label></p>
-        </div>
-        <p><label>Company<br><input type="text" name="company"></label></p>
-        <p><label>What do you want to achieve?<br><textarea name="message" rows="5" placeholder="Briefly describe your goals"></textarea></label></p>
-        <p><button type="submit" class="btn btn-primary">Send</button></p>
-      </form>
-
       <hr class="spacer">
 
       <h3>Newsletter</h3>
       <p>Get quarterly insights on strategy and ops.</p>
-      <!-- Mailchimp (or similar) embedded form – replace action URL with your own provider -->
-      <form action="https://example.us1.list-manage.com/subscribe/post?u=YOUR_U&amp;id=YOUR_ID" method="post" target="_blank" novalidate>
-        <div class="grid2">
-          <p><label>Email*<br><input type="email" name="EMAIL" required></label></p>
-          <p><button type="submit" class="btn">Subscribe</button></p>
-        </div>
+    
+      <!-- MAILCHIMP FORM: Replace action URL when ready -->
+      <form action="https://YOURPREFIX.us21.list-manage.com/subscribe/post?u=XXXXXXX&amp;id=YYYYYYY"
+            method="post" target="_blank" novalidate style="max-width: 400px; margin: auto; font-family: Inter Tight, sans-serif; border: 2px solid #202E4A; padding: 1em;">
+        <label for="email" style="font-weight: 700; color: #202E4A;">Get a Free Consultation</label><br>
+        <input type="email" name="EMAIL" id="email" placeholder="Enter your email"
+         style="padding: 0.5em; width: 100%; margin-top: 0.5em; margin-bottom: 1em; border: 1px solid #5988FE;" required>
+        <input type="submit" value="Book Now"
+         style="background-color: #202E4A; color: white; border: none; padding: 0.5em 1em; font-weight: 700; cursor: pointer;">
       </form>
     </div>
   </section>
