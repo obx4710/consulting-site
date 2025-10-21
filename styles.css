@@ -52,9 +52,58 @@ y
 }
 
 .container{width:min(100%,1000px);margin:0 auto;padding:1rem}
-.nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee}
-.nav .container{display:flex;align-items:center;justify-content:space-between}
-.brand{font-weight:800}
+
+/* === NAVIGATION BAR === */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff; /* clean white nav */
+  border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #0b1a36; /* dark navy accent */
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  font-family: "Inter", sans-serif;
+  color: #0b1a36;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #1d2b50; /* lighter navy on hover */
+}
+
+/* Match Book a Call button to hero style */
+.nav-links .btn-primary {
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  background-color: #0b1a36;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links .btn-primary:hover {
+  background-color: #1d2b50;
+  transform: translateY(-2px);
+}
 
 /* ===== Hero Section with Background Image ===== */
 .hero {
