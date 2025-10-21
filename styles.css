@@ -38,6 +38,19 @@ y
   transform: translateY(-2px);
 }
 
+/* Hero button fix */ 
+.hero .btn-primary {
+  background-color: #0b1a36 !important; /* dark navy */
+  color: #fff !important;
+  border: none !important;
+}
+
+.hero .btn-primary:hover {
+  background-color: #1d2b50 !important; /* lighter navy */
+  transform: translateY(-2px);
+  color: #fff !important;
+}
+
 .container{width:min(100%,1000px);margin:0 auto;padding:1rem}
 .nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee}
 .nav .container{display:flex;align-items:center;justify-content:space-between}
