@@ -8,7 +8,20 @@
 
 a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1rem;border:1px solid #111;border-radius:.5rem}
 
-/* Button */
+/* Base Button */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  border: 1px solid #111;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+/* Primary Button */
 .btn-primary {
   background-color: #0b1a36; /* dark navy like in your image */
   color: #fff;
@@ -18,7 +31,8 @@ a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1r
   border-radius: 0.5rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
+y
+/* Hover State */
 .btn-primary:hover {
   background-color: #1d2b50; /* lighter navy on hover */
   transform: translateY(-2px);
