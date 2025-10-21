@@ -58,8 +58,10 @@ y
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #ffffff; /* clean white nav */
-  border-bottom: 1px solid #eee;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* subtle shadow for depth */
+  padding: 0.75rem 0;
 }
 
 .nav-container {
@@ -87,6 +89,25 @@ y
 
 .nav-links a:hover {
   color: #1d2b50; /* lighter navy on hover */
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #0b1a36; /* your dark navy accent */
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 /* Match Book a Call button to hero style */
