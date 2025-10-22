@@ -1,14 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
 
-*{ box-sizing:border-box}html,body{
-    margin:0;
-    padding:0;
-    font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
-    color:#111;}
+/* =============================
+   GLOBAL BASE
+============================= */
+* {
+  box-sizing: border-box;
+}
 
-a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1rem;border:1px solid #111;border-radius:.5rem}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  color: #111;
+}
 
-/* Base Button */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =============================
+   BUTTONS
+============================= */
 .btn {
   display: inline-block;
   padding: 0.7rem 1rem;
@@ -21,7 +34,6 @@ a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1r
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
-/* Primary Button */
 .btn-primary {
   background-color: #0b1a36; /* dark navy */
   color: #fff;
@@ -32,28 +44,36 @@ a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1r
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover State */
 .btn-primary:hover {
-  background-color: #1d2b50; /* lighter navy on hover */
+  background-color: #1d2b50;
   transform: translateY(-2px);
 }
 
-/* Hero button fix */ 
+/* Hero button fix */
 .hero .btn-primary {
-  background-color: #0b1a36 !important; /* dark navy */
+  background-color: #0b1a36 !important;
   color: #fff !important;
   border: none !important;
 }
 
 .hero .btn-primary:hover {
-  background-color: #1d2b50 !important; /* lighter navy */
+  background-color: #1d2b50 !important;
   transform: translateY(-2px);
   color: #fff !important;
 }
 
-.container{width:min(100%,1000px);margin:0 auto;padding:1rem}
+/* =============================
+   LAYOUT
+============================= */
+.container {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  padding: 1rem;
+}
 
-/* === NAVIGATION BAR === */
+/* =============================
+   NAVIGATION
+============================= */
 .nav {
   position: sticky;
   top: 0;
@@ -71,11 +91,11 @@ a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1r
   padding: 1rem 0;
 }
 
-.brand { 
-  font-family: "Playfair Display", serif; 
-  font-weight: 700; 
-  font-size: 1.2rem; 
-  color: #0b1a36; 
+.brand {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #0b1a36;
 }
 
 .nav-links a {
@@ -83,13 +103,18 @@ a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1r
   font-family: "Inter", sans-serif;
   color: #0b1a36;
   font-weight: 500;
-  text-decoration: none;
   transition: color 0.3s ease;
 }
-.nav-links a:hover { color: #1d2b50; }
 
-/* underline only for normal nav links (not the button) */
-.nav-links a:not(.btn-primary) { position: relative; }
+.nav-links a:hover {
+  color: #1d2b50;
+}
+
+/* Underline effect only for normal links */
+.nav-links a:not(.btn-primary) {
+  position: relative;
+}
+
 .nav-links a:not(.btn-primary)::after {
   content: "";
   position: absolute;
@@ -100,7 +125,10 @@ a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1r
   background-color: #0b1a36;
   transition: width 0.3s ease;
 }
-.nav-links a:not(.btn-primary):hover::after { width: 100%; }  /* <-- this } was missing */
+
+.nav-links a:not(.btn-primary):hover::after {
+  width: 100%;
+}
 
 /* Nav "Book a Call" button */
 .nav-links .btn-primary {
@@ -112,12 +140,15 @@ a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1r
   border-radius: 0.4rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .nav-links .btn-primary:hover {
   background-color: #1d2b50;
   transform: translateY(-2px);
 }
 
-/* ===== Hero Section with Background Image ===== */
+/* =============================
+   HERO SECTION
+============================= */
 .hero {
   position: relative;
   height: 80vh;
@@ -133,7 +164,7 @@ a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1r
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* dark overlay for text readability */
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .hero-overlay {
@@ -161,13 +192,12 @@ a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1r
   line-height: 1.6;
 }
 
-/* Hero button — keep navy to match brand */
+/* Hero button styling */
 .hero .btn-primary {
   background-color: #0b1a36;
   color: #fff;
   padding: 1rem 2rem;
   font-size: 1.05rem;
-  border: none;
   border-radius: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -175,19 +205,25 @@ a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1r
 
 .hero .btn-primary:hover {
   background-color: #1d2b50;
-  color: #fff;
   transform: translateY(-2px);
 }
 
+/* =============================
+   SECTIONS
+============================= */
+.section {
+  padding: 3rem 0;
+}
 
-.section{padding:3rem 0}
-.section.alt{background:#fafafa}
+.section.alt {
+  background: #fafafa;
+}
 
-/* === ABOUT SECTION === */
+/* ABOUT SECTION */
 #about {
-  background-color: #0b1a36; /* dark navy background */
-  color: #fff; /* white text for readability */
-  padding: 1.2rem 1rem;
+  background-color: #0b1a36;
+  color: #fff;
+  padding: 3rem 1rem;
   text-align: center;
 }
 
@@ -196,7 +232,7 @@ a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1r
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #fff; /* ensure heading is bright white */
+  color: #fff;
 }
 
 #about p {
@@ -205,14 +241,18 @@ a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1r
   line-height: 1.6;
   max-width: 700px;
   margin: 0 auto;
-  color: #f1f3f9; /* slightly softer white for good contrast */
+  color: #f1f3f9;
 }
 
-.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-.grid2{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+/* SERVICES GRID */
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
 
 .card {
-  border: 1px solid rgba(11, 26, 54, 0.12); /* soft navy-tinted border */
+  border: 1px solid rgba(11, 26, 54, 0.12);
   border-radius: 0.75rem;
   padding: 1.5rem;
   background: #fff;
@@ -222,15 +262,26 @@ a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1r
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: rgba(11, 26, 54, 0.25); /* deepens navy border on hover */
+  border-color: rgba(11, 26, 54, 0.25);
   box-shadow: 0 10px 24px rgba(11, 26, 54, 0.15);
 }
-.footer{border-top:1px solid #eee;padding:1.5rem 0}
-.small{font-size:.9rem;color:#555}
-.hidden{position:absolute;left:-10000px;opacity:0;height:0;width:0;overflow:hidden}
-.spacer{margin:2rem 0;border:0;border-top:1px solid #eee}
 
-/* Newsletter Section */
+/* =============================
+   FOOTER
+============================= */
+.footer {
+  border-top: 1px solid #eee;
+  padding: 1.5rem 0;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* =============================
+   NEWSLETTER SECTION
+============================= */
 .newsletter {
   padding: 3rem 1.5rem;
   max-width: 900px;
@@ -238,16 +289,6 @@ a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1r
   text-align: center;
 }
 
-.newsletter h2 {
-  margin-bottom: 0.5rem;
-}
-
-.newsletter p {
-  color: #333;
-  margin-bottom: 1.5rem;
-}
-
-/* Newsletter form styling */
 .newsletter-form {
   background: #fff;
   border: 1px solid #eee;
@@ -282,97 +323,23 @@ a{color:inherit;text-decoration:none} .btn{display:inline-block;padding:.7rem 1r
   background-color: #333;
 }
 
-/* Match consultation form to newsletter style */
+/* =============================
+   CONSULTATION SECTION + CALENDLY
+============================= */
+/* Consultation Section - with subtle contrast background */
 .consultation {
   text-align: center;
   padding: 3rem 1rem;
-  background: #fff;
+  background: #f7f8fa; /* soft off-white/gray for subtle contrast */
 }
 
-.consult-form {
-  margin-top: 1rem;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.consult-form input[type="email"] {
-  width: 100%;
-  padding: 0.9rem;
-  margin: 0.75rem 0;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
-.consult-form .btn-primary {
-  width: 100%;
-  padding: 0.9rem;
-  border-radius: 0.5rem;
-  background: #000;
-  color: #fff;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.consult-form .btn-primary:hover {
-  background: #202e4a;
-}
-
-/* Serif headings (Playfair Display) */
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  color: #111;
-  letter-spacing: -0.5px;
-}
-
-/* === Calendly Embed Styling === */
-.calendly-inline-widget {
-  border: 1px solid #eee;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  margin-top: 1.5rem;
-}
-/* === Calendly Embed Styling === */
-.consultation .calendly-inline-widget {
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  padding: 1.5rem;
-  margin-top: 2rem;
-  min-height: 700px;
-  transition: all 0.3s ease;
-}
-
-/* Hover accent (matches your dark theme) */
-.consultation .calendly-inline-widget:hover {
-  border-color: #111;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-/* Responsive height adjustment for mobile */
-@media (max-width: 600px) {
-  .consultation .calendly-inline-widget {
-    min-height: 900px;
-    padding: 1rem;
-  }
-}
-
-/* Headings inside the section */
 .consultation h2 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   color: #111;
   margin-bottom: 0.5rem;
-  text-align: center;
 }
 
-/* Paragraph styling for consistent layout */
 .consultation p {
   color: #444;
   font-weight: 400;
@@ -381,7 +348,6 @@ h1, h2, h3 {
   margin: 0 auto 1.5rem;
 }
 
-/* Center the form above Calendly */
 .consultation .consult-form {
   display: flex;
   justify-content: center;
@@ -411,12 +377,34 @@ h1, h2, h3 {
   transform: translateY(-1px);
 }
 
-/* Smooth scroll + offset for sticky header */
-:root { --nav-h: 72px; }            /* tweak to your actual nav height */
+/* Calendly inline widget styling */
+.consultation .calendly-inline-widget {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  min-height: 700px;
+  transition: all 0.3s ease;
+}
+
+.consultation .calendly-inline-widget:hover {
+  border-color: #111;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive Calendly height */
+@media (max-width: 600px) {
+  .consultation .calendly-inline-widget {
+    min-height: 900px;
+    padding: 1rem;
+  }
+}
+
+/* =============================
+   SMOOTH SCROLL OFFSET
+============================= */
+:root { --nav-h: 72px; }
 html { scroll-behavior: smooth; }
-
-/* Make anchor jumps land below the sticky header */
 section[id] { scroll-margin-top: var(--nav-h); }
-
-/* If you have any other targets (e.g., #services link to a div), add: */
-/* [id] { scroll-margin-top: var(--nav-h); } */
