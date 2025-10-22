@@ -10,7 +10,7 @@
   <link rel="canonical" href="https://obrienconsulting.netlify.app/">
   <meta name="robots" content="index, follow"> 
   
-  <!-- Open Graph (for Facebook, LinkedIn, Slack)-->
+  <!-- Open Graph (for Facebook, LinkedIn, Slack) -->
   <meta property="og:title" content="O'Brien Consulting — Strategy & Ops">
   <meta property="og:description" content="Strategy, operations, and growth for startups and small businesses.">
   <meta property="og:type" content="website">
@@ -24,52 +24,66 @@
   <meta name="twitter:image" content="https://obrienconsulting.netlify.app/og-image.jpg"> 
 
   <!-- Google Analytics (GA4) – replace G-XXXXXX with your Measurement ID -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-XXXXXX');
-  </script> -->
-  
+  </script>
+  -->
+
   <!-- Fonts + Styles --> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Smooth scroll + offset for sticky nav -->
+  <style>
+    :root { --nav-h: 72px; }
+    html { scroll-behavior: smooth; }
+    section[id] { scroll-margin-top: var(--nav-h); }
+  </style>
 </head>
-  
-<header class="nav">
-  <div class="container nav-container">
-    <a href="#" class="brand">O’Brien Consulting</a>
-    <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact" class="btn btn-primary">Book a Call</a>
-    </nav>
-  </div>
-</header>
 
-<section class="hero">
-  <div class="hero-overlay">
-    <h1>Clear Strategy. Smooth Operations.</h1>
-    <p>Helping startups scale efficiently with smart, data-driven systems.</p>
-    <a href="#consult" class="btn-primary">Book a Free Consultation</a>
-  </div>
-</section>
+<body>
 
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="container nav-container">
+      <a href="#" class="brand">O’Brien Consulting</a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn btn-primary">Book a Call</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Clear Strategy. Smooth Operations.</h1>
+      <p>Helping startups scale efficiently with smart, data-driven systems.</p>
+      <a href="#contact" class="btn-primary">Book a Free Consultation</a>
+    </div>
+  </section>
+
+  <!-- Services -->
   <section id="services" class="section">
     <div class="container grid">
       <div class="card">
         <h3>Strategy Sprints</h3>
-        <p>90‑day plans with measurable outcomes, aligned to your north star.</p>
+        <p>90-day plans with measurable outcomes, aligned to your north star.</p>
       </div>
       <div class="card">
         <h3>Ops & Process</h3>
         <p>Workflow audits, SOPs, and automations that save hours every week.</p>
       </div>
       <div class="card">
-        <h3>Go‑to‑Market</h3>
+        <h3>Go-to-Market</h3>
         <p>Positioning, messaging, and repeatable lead-generation playbooks.</p>
       </div>
     </div>
@@ -79,60 +93,63 @@
   <section id="about" class="section">
     <div class="container">
       <h2>About</h2>
-      <p>We’ve helped 50+ startups and SMBs refine strategy, streamline operations, and unlock growth across SaaS, e‑commerce, and services.</p>
+      <p>We’ve helped 50+ startups and SMBs refine strategy, streamline operations, and unlock growth across SaaS, e-commerce, and services.</p>
     </div>
   </section>
 
   <!-- Book a Free Consult Section -->
-<section id="contact" class="section consultation">
-  <div class="container">
-    <h2>Book a Free Consult</h2>
-    <p>Tell us a bit about your goals. We’ll respond within one business day.</p>
+  <section id="contact" class="section consultation">
+    <div class="container">
+      <h2>Book a Free Consult</h2>
+      <p>Tell us a bit about your goals. We’ll respond within one business day.</p>
 
-<form 
-  class="consult-form"
-  action="https://us11.list-manage.com/subscribe/post?u=98098f21252200e280806c5e2&amp;id=f6c777f5af"
-  method="post"
-  target="_blank"
-  novalidate
->
-  <input type="hidden" name="tags[]" value="Consultation Lead">
-  <input type="email" name="EMAIL" placeholder="Enter your email" required>
-  <button type="submit" class="btn btn-primary">Book Now</button>
-</form>
+      <form 
+        class="consult-form"
+        action="https://us11.list-manage.com/subscribe/post?u=98098f21252200e280806c5e2&amp;id=f6c777f5af"
+        method="post"
+        target="_blank"
+        novalidate
+      >
+        <input type="hidden" name="tags[]" value="Consultation Lead">
+        <input type="email" name="EMAIL" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-primary">Book Now</button>
+      </form>
 
-<!-- Calendly Inline Embed -->
-<div 
-  class="calendly-inline-widget" 
-  data-url="https://calendly.com/obx4710/30min" 
-  style="min-width:320px;height:700px;margin-top:2rem;">
-</div>
-<script 
-  type="text/javascript" 
-  src="https://assets.calendly.com/assets/external/widget.js" 
-  async>
-</script>
-</section>
+      <!-- Calendly Inline Embed -->
+      <div 
+        class="calendly-inline-widget" 
+        data-url="https://calendly.com/obx4710/30min" 
+        style="min-width:320px;height:700px;margin-top:2rem;">
+      </div>
+      <script 
+        type="text/javascript" 
+        src="https://assets.calendly.com/assets/external/widget.js" 
+        async>
+      </script>
+    </div>
+  </section>
 
-  <!-- Newsletter (Mailchimp Section -- currently here at bottom --> 
-<section class="newsletter">
-  <div class="container">
-    <h2>Newsletter</h2>
-    <p>Get quarterly insights on strategy and ops.</p>
+  <!-- Newsletter Section --> 
+  <section class="newsletter">
+    <div class="container">
+      <h2>Newsletter</h2>
+      <p>Get quarterly insights on strategy and ops.</p>
 
-<form 
-  class="newsletter-form"
-  action="https://us11.list-manage.com/subscribe/post?u=98098f21252200e280806c5e2&amp;id=f6c777f5af"
-  method="post"
-  target="_blank"
-  novalidate
->
-  <input type="hidden" name="tags[]" value="Newsletter Lead">
-  <input type="email" name="EMAIL" placeholder="Enter your email" required>
-  <button type="submit" class="btn-primary">Subscribe</button>
-</form>
+      <form 
+        class="newsletter-form"
+        action="https://us11.list-manage.com/subscribe/post?u=98098f21252200e280806c5e2&amp;id=f6c777f5af"
+        method="post"
+        target="_blank"
+        novalidate
+      >
+        <input type="hidden" name="tags[]" value="Newsletter Lead">
+        <input type="email" name="EMAIL" placeholder="Enter your email" required>
+        <button type="submit" class="btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
 
-
+  <!-- Footer -->
   <footer class="footer">
     <div class="container small">
       <span>© <span id="year"></span> O'Brien Consulting</span>
@@ -152,6 +169,11 @@
     "sameAs": ["https://www.linkedin.com/"]
   }
   </script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
+

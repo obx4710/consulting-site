@@ -410,3 +410,13 @@ h1, h2, h3 {
   background-color: #333;
   transform: translateY(-1px);
 }
+
+/* Smooth scroll + offset for sticky header */
+:root { --nav-h: 72px; }            /* tweak to your actual nav height */
+html { scroll-behavior: smooth; }
+
+/* Make anchor jumps land below the sticky header */
+section[id] { scroll-margin-top: var(--nav-h); }
+
+/* If you have any other targets (e.g., #services link to a div), add: */
+/* [id] { scroll-margin-top: var(--nav-h); } */
