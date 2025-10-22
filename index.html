@@ -89,16 +89,17 @@
     <h2>Book a Free Consult</h2>
     <p>Tell us a bit about your goals. We’ll respond within one business day.</p>
 
- <form 
-      class="consult-form"
-      action="https://us11.list-manage.com/subscribe/post?u=98098f21252200e280806c5e2&amp;id=f6c777f5af"
-      method="post"
-      target="_blank"
-      novalidate
-    >
-      <input type="email" name="EMAIL" placeholder="Enter your email" required>
-      <button type="submit" class="btn btn-primary">Book Now</button>
-    </form>
+<form 
+  class="consult-form"
+  action="https://us11.list-manage.com/subscribe/post?u=98098f21252200e280806c5e2&amp;id=f6c777f5af"
+  method="post"
+  target="_blank"
+  novalidate
+>
+  <input type="hidden" name="tags[]" value="Consultation Lead">
+  <input type="email" name="EMAIL" placeholder="Enter your email" required>
+  <button type="submit" class="btn btn-primary">Book Now</button>
+</form>
   </div>
 </section>
 
@@ -108,12 +109,17 @@
     <h2>Newsletter</h2>
     <p>Get quarterly insights on strategy and ops.</p>
 
-    <form class="newsletter-form">
-      <input type="email" name="EMAIL" placeholder="Enter your email" required>
-      <button type="submit" class="btn-primary">Subscribe</button>
-    </form>
-  </div>
-</section>
+<form 
+  class="newsletter-form"
+  action="https://us11.list-manage.com/subscribe/post?u=98098f21252200e280806c5e2&amp;id=f6c777f5af"
+  method="post"
+  target="_blank"
+  novalidate
+>
+  <input type="hidden" name="tags[]" value="Newsletter Lead">
+  <input type="email" name="EMAIL" placeholder="Enter your email" required>
+  <button type="submit" class="btn-primary">Subscribe</button>
+</form>
 
 
   <footer class="footer">
