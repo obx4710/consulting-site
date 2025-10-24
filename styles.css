@@ -295,8 +295,7 @@ a {
    NEWSLETTER SECTION
 ============================= */
 .newsletter {
-  background-color: #EAF1FF; /* soft light blue */
-  padding: 3rem 1.5rem;
+  background-color: #f7f8fa; 
   width: 100%;
   margin: 0 auto;
   text-align: center;
