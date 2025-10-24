@@ -57,7 +57,8 @@ a {
 }
 
 .hero .btn-primary:hover {
-  background-color: #1d2b50 !important;
+  
+  background-color: #274684 !important;
   transform: translateY(-2px);
   color: #fff !important;
 }
@@ -281,6 +282,7 @@ a {
    NEWSLETTER SECTION
 ============================= */
 .newsletter {
+  background-color: #EAF1FF; /* soft light blue */
   padding: 3rem 1.5rem;
   max-width: 900px;
   margin: 0 auto;
@@ -328,6 +330,7 @@ a {
   text-align: center;
   padding: 3rem 1rem;
   background: #f7f8fa;
+  background-color: #F2F6FD;
 }
 
 .consultation h2 {
