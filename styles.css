@@ -269,13 +269,26 @@ a {
    FOOTER
 ============================= */
 .footer {
-  border-top: 1px solid #eee;
+  background-color: #0b1a36; /* same as nav bar */
+  color: #ffffff;
+  border-top: none;
   padding: 1.5rem 0;
+  text-align: center;
+}
+
+.footer a {
+  color: #b3c7f9; /* soft blue accent */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 .small {
   font-size: 0.9rem;
-  color: #555;
+  color: #dfe6f8; /* lighter gray-blue text */
 }
 
 /* =============================
