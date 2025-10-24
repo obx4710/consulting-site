@@ -301,14 +301,28 @@ a {
   text-align: center;
 }
 
+.newsletter h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0b1a36; /* matches brand navy */
+  margin-bottom: 0.75rem;
+}
+
+.newsletter p {
+  color: #333;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
 .newsletter-form {
   background: #fff;
-  border: 1px solid #eee;
+  border:1px solid rgba(0, 0, 0, 0.05);
   border-radius: 0.75rem;
-  padding: 1.5rem;
-  max-width: 420px;
+  padding: 1.25rem;
+  max-width: 400px;
   margin: 0 auto;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .newsletter-form input[type="email"] {
@@ -323,16 +337,18 @@ a {
 .newsletter-form button {
   width: 100%;
   padding: 0.75rem;
-  background-color: #111;
-  color: white;
+  background-color: #0b1a36;
+  color: #fff;
   border: none;
   border-radius: 0.5rem;
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .newsletter-form button:hover {
-  background-color: #333;
+  background-color: #1d2b50;
 }
 
 /* =============================
