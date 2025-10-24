@@ -295,7 +295,7 @@ a {
    NEWSLETTER SECTION
 ============================= */
 .newsletter {
-  background-color: #f7f8fa; 
+  background-color: #EEF2FA; 
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -341,8 +341,7 @@ a {
 .consultation {
   text-align: center;
   padding: 3rem 1rem;
-  background: #f7f8fa;
-  background-color: #F2F6FD;
+  background-color: #EEF2FA;
 }
 
 .consultation h2 {
