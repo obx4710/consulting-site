@@ -72,15 +72,15 @@ a {
 }
 
 /* =============================
-   NAVIGATION
+   NAVIGATION (DARK MODE)
 ============================= */
 .nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  background-color: #0b1a36; /* deep navy background */
+  border-bottom: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
   padding: 0.9rem 0;
 }
 
@@ -95,26 +95,19 @@ a {
   font-family: "Playfair Display", serif;
   font-weight: 700;
   font-size: 1.2rem;
-  color: #0b1a36;
+  color: #ffffff; /* white brand text */
 }
 
 .nav-links a {
   margin-left: 1.5rem;
   font-family: "Inter", sans-serif;
-  color: #0b1a36;
+  color: #ffffff; /* white link text */
   font-weight: 500;
+  position: relative;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #1d2b50;
-}
-
-/* Underline effect only for normal links */
-.nav-links a:not(.btn-primary) {
-  position: relative;
-}
-
+/* Hover underline effect */
 .nav-links a:not(.btn-primary)::after {
   content: "";
   position: absolute;
@@ -122,11 +115,15 @@ a {
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background-color: #0b1a36;
+  background-color: #b3c7f9; /* soft blue accent */
   transition: width 0.3s ease;
 }
 
-.nav-links a:not(.btn-primary):hover::after {
+.nav-links a:hover {
+  color: #b3c7f9;
+}
+
+.nav-links a:hover::after {
   width: 100%;
 }
 
@@ -134,15 +131,16 @@ a {
 .nav-links .btn-primary {
   padding: 0.5rem 1.2rem;
   font-weight: 600;
-  background-color: #0b1a36;
-  color: #fff;
+  background-color: #b3c7f9;
+  color: #0b1a36;
   border: none;
   border-radius: 0.4rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links .btn-primary:hover {
-  background-color: #1d2b50;
+  background-color: #ffffff;
+  color: #0b1a36;
   transform: translateY(-2px);
 }
 
@@ -326,11 +324,10 @@ a {
 /* =============================
    CONSULTATION SECTION + CALENDLY
 ============================= */
-/* Consultation Section - with subtle contrast background */
 .consultation {
   text-align: center;
   padding: 3rem 1rem;
-  background: #f7f8fa; /* soft off-white/gray for subtle contrast */
+  background: #f7f8fa;
 }
 
 .consultation h2 {
@@ -377,7 +374,6 @@ a {
   transform: translateY(-1px);
 }
 
-/* Calendly inline widget styling */
 .consultation .calendly-inline-widget {
   background: #fff;
   border: 1px solid #e5e5e5;
@@ -394,7 +390,6 @@ a {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-/* Responsive Calendly height */
 @media (max-width: 600px) {
   .consultation .calendly-inline-widget {
     min-height: 900px;
@@ -409,9 +404,9 @@ a {
 html { scroll-behavior: smooth; }
 section[id] { scroll-margin-top: var(--nav-h); }
 
-/* =========================
-   Articles Section (Card Style)
-   ========================= */
+/* =============================
+   ARTICLES SECTION
+============================= */
 .articles {
   padding: 4rem 1rem;
   background: #fafafa;
