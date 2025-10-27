@@ -355,24 +355,23 @@ a {
    CONSULTATION SECTION + CALENDLY
 ============================= */
 .consultation {
+  background-color: #EEF2FA; /* soft blue-gray */
   text-align: center;
-  padding: 3rem 1rem;
-  background-color: #EEF2FA;
+  padding: 4rem 1rem;
 }
 
 .consultation h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
   font-weight: 700;
-  color: #111;
-  margin-bottom: 0.5rem;
+  color: #0b1a36;
+  margin-bottom: 0.75rem;
 }
 
 .consultation p {
-  color: #444;
-  font-weight: 400;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto 1.5rem;
+  color: #333;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
 }
 
 .consultation .consult-form {
