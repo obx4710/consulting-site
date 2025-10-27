@@ -694,14 +694,7 @@ section[id] { scroll-margin-top: var(--nav-h); }
 /* --- SERVICE CARD HOVER ANIMATIONS --- */
 .service-icon {
   display: inline-block;
-  transition: transform 0.4s ease, filter 0.4s ease;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
-}
-
-/* --- SERVICE CARD HOVER ANIMATIONS --- */
-.service-icon {
-  display: inline-block;
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
 }
 
@@ -717,11 +710,11 @@ section[id] { scroll-margin-top: var(--nav-h); }
 
 /* Go-to-Market → paper plane tilts forward */
 .card.market:hover .service-icon {
-  transform: rotateX(10deg) scale(1.05);
+  transform: rotateX(12deg) scale(1.05);
   transform-origin: bottom center;
 }
 
-/* Smooth card lift & glow effect */
+/* Smooth card lift & glow */
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 24px rgba(11, 26, 54, 0.15);
@@ -729,31 +722,5 @@ section[id] { scroll-margin-top: var(--nav-h); }
 }
 
 .card:hover .service-icon {
-  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.4));
-}
-
-
-/* Ops & Process → gear rotates */
-.card.ops:hover .service-icon {
-  transform: rotate(15deg);
-}
-
-/* Go-to-Market → paper plane tilts forward */
-.card.market:hover .service-icon {
-  transform: rotate(-5deg) translateY(-4px);
-}
-
-/* Smooth card lift effect */
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 24px rgba(11, 26, 54, 0.15);
-  transition: all 0.3s ease;
-}
-
-.card:hover .service-icon {
-  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.4));
-}
-
-.service-img {
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.45));
 }
