@@ -573,3 +573,104 @@ section[id] { scroll-margin-top: var(--nav-h); }
 .read-more:hover {
   color: #555;
 }
+
+/* SERVICES SECTION FIX */
+#services {
+  background: linear-gradient(180deg, #fdfdfd 0%, #f8f9fb 100%);
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.section-tagline {
+  text-align: center;
+  color: #555;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+/* Centered Heading + Gold Line */
+#services h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #0b1a36;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto 2.5rem;
+  display: inline-block;
+  position: relative;
+}
+
+#services h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #D4AF37;
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+}
+
+/* Cards Layout */
+#services .grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  justify-items: center;
+}
+
+#services .card {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 1px solid rgba(11, 26, 54, 0.1);
+  max-width: 300px;
+  text-align: center;
+}
+
+#services .card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.12);
+}
+
+/* Icons */
+.card-icon {
+  height: 42px;
+  width: 42px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+  filter: brightness(0) saturate(100%) invert(61%) sepia(36%) saturate(503%) hue-rotate(15deg) brightness(93%) contrast(90%);
+}
+
+/* Titles and Text */
+#services .card h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0b1a36;
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+#services .card h3::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 2px;
+  background-color: #D4AF37;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+#services .card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
