@@ -104,7 +104,7 @@ a {
 .nav-links a {
   margin-left: 1.5rem;
   font-family: "Inter", sans-serif;
-  color: #ffffff; /* white link text */
+  color: #D4AF37;; /* white link text */
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
@@ -118,7 +118,7 @@ a {
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background-color: #b3c7f9; /* soft blue accent */
+  background-color: #D4AF37;
   transition: width 0.3s ease;
 }
 
@@ -179,30 +179,38 @@ a {
    HERO SECTION
 ============================= */
 .hero {
-  position: relative;
-  height: 80vh;
-  background: url('images/hero-bg.jpg') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  color: white;
+  color: #ffffff;
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  position: relative;
+  padding: 7rem 1rem;
 }
 
+/* Dark overlay for consistent tone */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(11, 26, 54, 0.55); /* same navy as nav bar */
+  z-index: 0;
 }
 
-.hero-overlay {
+/* Main hero content container */
+.hero-content {
   position: relative;
   z-index: 1;
   max-width: 750px;
+  margin: 0 auto;
   padding: 0 1rem;
+  animation: fadeIn 1s ease-out;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Headline */
 .hero h1 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
@@ -213,6 +221,7 @@ a {
   color: #fff;
 }
 
+/* Subtext */
 .hero p {
   font-family: 'Inter', sans-serif;
   font-size: 1.2rem;
@@ -221,20 +230,24 @@ a {
   line-height: 1.6;
 }
 
-/* Hero button styling */
+/* Button */
 .hero .btn-primary {
-  background-color: #0b1a36;
-  color: #fff;
-  padding: 1rem 2rem;
-  font-size: 1.05rem;
-  border-radius: 0.6rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  background-color: #D4AF37; /* Aureus gold */
+  color: #0b1a36;
+  font-weight: 600;
 }
 
 .hero .btn-primary:hover {
-  background-color: #1d2b50;
-  transform: translateY(-2px);
+  background-color: #ffffff;
+  color: #0b1a36;
+}
+
+/* Hero logo (add if you want it above headline) */
+.hero-logo {
+  height: 110px;
+  width: auto;
+  margin-bottom: 1.5rem;
+  filter: brightness(1.2);
 }
 
 /* =============================
