@@ -690,3 +690,36 @@ section[id] { scroll-margin-top: var(--nav-h); }
   line-height: 1.6;
   max-width: 260px;
 }
+
+/* --- SERVICE CARD HOVER ANIMATIONS --- */
+.service-icon {
+  display: inline-block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+}
+
+/* Strategy Sprints → arrow grows upward */
+.card.strategy:hover .service-icon {
+  transform: translateY(-6px) scale(1.05);
+}
+
+/* Ops & Process → gear rotates */
+.card.ops:hover .service-icon {
+  transform: rotate(15deg);
+}
+
+/* Go-to-Market → paper plane tilts forward */
+.card.market:hover .service-icon {
+  transform: rotate(-5deg) translateY(-4px);
+}
+
+/* Smooth card lift effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(11, 26, 54, 0.15);
+  transition: all 0.3s ease;
+}
+
+.card:hover .service-icon {
+  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.4));
+}
