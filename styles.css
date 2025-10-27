@@ -85,6 +85,8 @@ a {
   padding: 0.9rem 0;
 }
 
+
+
 .nav-container {
   display: flex;
   align-items: center;
@@ -143,6 +145,32 @@ a {
   background-color: #ffffff;
   color: #0b1a36;
   transform: translateY(-2px);
+}
+
+  /* Logo image inside nav */
+.logo-img {
+  height: 42px;           /* good default size */
+  width: auto;
+  display: block;
+}
+
+/* Align logo nicely with nav items */
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+/* optional: subtle hover opacity */
+.brand:hover .logo-img {
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+/* optional responsive tweak */
+@media (max-width: 600px) {
+  .logo-img {
+    height: 34px;
+  }
 }
 
 /* =============================
