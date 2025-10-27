@@ -149,7 +149,7 @@ a {
 
   /* Logo image inside nav */
 .logo-img {
-  height: 42px;           /* good default size */
+  height: 38px;
   width: auto;
   display: block;
 }
