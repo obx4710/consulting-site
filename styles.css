@@ -724,3 +724,7 @@ section[id] { scroll-margin-top: var(--nav-h); }
 .card:hover .service-icon {
   filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.45));
 }
+
+.service-icon {
+  transform-origin: center center;
+}
