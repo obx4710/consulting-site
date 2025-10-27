@@ -85,13 +85,13 @@ a {
   padding: 0.9rem 0;
 }
 
-
-
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .brand {
