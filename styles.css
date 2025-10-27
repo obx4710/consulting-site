@@ -158,6 +158,7 @@ a {
 .brand {
   display: flex;
   align-items: center;
+  padding-top: 2px; /* adjust up/down slightly if needed */
 }
 
 /* optional: subtle hover opacity */
