@@ -304,19 +304,30 @@ section h2::after {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+/* Default card */
 .card {
-  border: 1px solid rgba(11, 26, 54, 0.12);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
   background: #fff;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 1px solid #eee;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
 }
 
+/* Card image should never tilt */
+.card img {
+  transition: transform 0.3s ease;
+  transform: none !important;
+}
+
+/* Hover effect: glow the card only */
 .card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(11, 26, 54, 0.25);
-  box-shadow: 0 10px 24px rgba(11, 26, 54, 0.15);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.3); /* soft gold glow */
+  transform: translateY(-4px);
+}
+
+.card:hover img {
+  transform: none; /* keep image stable */
 }
 
 /* =============================
