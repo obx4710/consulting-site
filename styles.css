@@ -312,24 +312,24 @@ section h2::after {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-.service-card img {
+/* Glow effect on hover for the card */
+.card:hover {
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4); /* true gold glow */
+  transform: translateY(-4px); /* small lift but no tilt */
+}
+
+/* Image styling — remove tilt and glow */
+.card img {
   width: 100%;
-  height: 200px;
-  object-fit: contain; /* prevents cropping */
-  box-shadow: none !important; /* removes glow around image */
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25); /* gold glow around card */
-  transform: translateY(-3px);
-}
-
-.service-card:hover img {
-  transform: none;
+  height: auto;
+  border-radius: 0;
   box-shadow: none;
+  transform: none;
+  transition: none;
 }
 
 /* =============================
