@@ -314,20 +314,23 @@ section h2::after {
   overflow: hidden;
 }
 
-/* Card image should never tilt */
+/* Remove glow from image */
 .card img {
+  box-shadow: none !important;
   transition: transform 0.3s ease;
   transform: none !important;
 }
 
-/* Hover effect: glow the card only */
+/* Hover effect only on card */
 .card:hover {
   box-shadow: 0 6px 18px rgba(212, 175, 55, 0.3); /* soft gold glow */
   transform: translateY(-4px);
 }
 
+/* Keep image stable */
 .card:hover img {
-  transform: none; /* keep image stable */
+  box-shadow: none;
+  transform: none;
 }
 
 /* =============================
@@ -524,33 +527,26 @@ section[id] { scroll-margin-top: var(--nav-h); }
   gap: 2rem;
 }
 
-/* Base card style */
 .card {
   background: #fff;
   border: 1px solid #eee;
   border-radius: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Remove glow from image */
-.card img {
-  box-shadow: none !important;
-  transition: transform 0.3s ease;
-  transform: none !important;
-}
-
-/* Hover effect only on card */
 .card:hover {
-  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.3); /* soft gold glow */
-  transform: translateY(-4px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+  transform: translateY(-3px);
 }
 
-/* Keep image stable */
-.card:hover img {
-  box-shadow: none;
-  transform: none;
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .card-content {
