@@ -704,40 +704,24 @@ section[id] { scroll-margin-top: var(--nav-h); }
   max-width: 260px;
 }
 
-/* --- SERVICE CARD HOVER ANIMATIONS --- */
+/* Base style for service icons (no hover animation) */
 .service-icon {
   display: inline-block;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08)); /* subtle neutral shadow */
+  transition: none; /* no rotation or movement */
 }
-
-/* Strategy Sprints → arrow subtly grows upward */
-.card.strategy:hover .service-icon {
-  transform: scale(1.08) translateY(-4px);
-}
-
-/* Ops & Process → gear rotates slightly */
-.card.ops:hover .service-icon {
-  transform: rotate(15deg);
-}
-
-/* Go-to-Market → paper plane tilts forward */
-.card.market:hover .service-icon {
-  transform: rotateX(12deg) scale(1.05);
-  transform-origin: bottom center;
-}
-
-/* Smooth card lift & glow */
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 24px rgba(11, 26, 54, 0.15);
+/* Smooth card lift & subtle gold glow */
+#services .card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.45);
+  box-shadow: 0 8px 22px rgba(212, 175, 55, 0.25); /* soft golden glow */
   transition: all 0.3s ease;
 }
 
-.card:hover .service-icon {
-  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.45));
-}
-
-.service-icon {
-  transform-origin: center center;
+/* Keep service icons static (no tilt, no glow) */
+#services .card .service-icon,
+#services .card:hover .service-icon {
+  transform: none !important;
+  filter: none !important;
+  transition: none !important;
 }
